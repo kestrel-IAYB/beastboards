@@ -30,6 +30,7 @@ namespace BeastBoards.Api
 
             using (var scope = app.Services.CreateScope())
             {
+                Console.WriteLine(scope.ServiceProvider.GetService<BeastBoardsConfig>().IAmYourBeastAppId);
                 scope.ServiceProvider.GetService<BeastBoardsContext>().Database.Migrate();
             }
 
