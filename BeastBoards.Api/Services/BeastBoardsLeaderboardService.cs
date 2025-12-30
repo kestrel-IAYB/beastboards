@@ -45,7 +45,7 @@ namespace BeastBoards.Api.Services
             //get friend entries
             var friends = _db.LeaderboardTimings.AsNoTracking().Where(x => x.LevelNumber == req.LevelNumber && req.FriendIds.Contains(x.SteamId)).ToList();
 
-            var allEntries = friends.Concat([timing]).OrderBy(x => x.Time).ToList();
+            var allEntries = friends.Concat(new List<LeaderboardTiming>() { timing }).OrderBy(x => x.Time).ToList();
 
             return allEntries;
         }
