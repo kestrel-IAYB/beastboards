@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using BeastBoards.Stubs;
-using MelonLoader;
+﻿using BeastBoards.Common.Stubs;
 using Steamworks;
 
-namespace BeastBoards
+namespace BeastBoards.Common
 {
     public class Steam
     {
-
         public string SteamToken { get; set; }
 
         public CSteamID UserId { get; set; }
@@ -18,9 +13,6 @@ namespace BeastBoards
 
         public Steam(GetTicketForWebApiResponse_t result)
         {
-
-
-
             SteamToken = BitConverter.ToString(result.m_rgubTicket).Replace("-", "");
             Users = new List<SteamUserStub>();
 

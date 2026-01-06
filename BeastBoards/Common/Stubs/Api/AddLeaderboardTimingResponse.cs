@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BeastBoards.Stubs.Api
+﻿namespace BeastBoards.Common.Stubs.Api
 {
     [Serializable]
     public class AddLeaderboardTimingResponse

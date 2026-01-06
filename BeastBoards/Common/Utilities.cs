@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Steamworks;
+﻿using Steamworks;
 using UnityEngine;
 
-namespace BeastBoards
+namespace BeastBoards.Common
 {
     public static class Utilities
     {

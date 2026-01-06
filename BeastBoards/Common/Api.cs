@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Text;
-using BeastBoards.Stubs;
-using BeastBoards.Stubs.Api;
-using MelonLoader;
-using MelonLoader.TinyJSON;
+using BeastBoards.Common.Stubs;
+using BeastBoards.Common.Stubs.Api;
 using Newtonsoft.Json;
-using UnityEngine;
 
-namespace BeastBoards
+namespace BeastBoards.Common
 {
     public class Api
     {
@@ -33,11 +28,9 @@ namespace BeastBoards
 
         }
 
-
-
         public async Task AuthenticateAsync()
         {
-            var req = new AuthenticateApiRequest() { Token = BeastBoardsMod.Steam.SteamToken };
+            var req = new AuthenticateApiRequest() { Token = Core.Steam.SteamToken };
             var json = JsonConvert.SerializeObject(req);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -48,11 +41,7 @@ namespace BeastBoards
                 var jwt = await result.Content.ReadAsStringAsync();
                 Jwtoken = jwt;
 
-#if DEBUG
-                Melon<BeastBoardsMod>.Instance.LoggerInstance.Msg($"JWT is {Jwtoken}");
-#endif
-
-                BeastBoardsMod.BeastBoardsIsRunning = true;
+                Core.BeastBoardsIsRunning = true;
             }
         }
 
@@ -63,7 +52,7 @@ namespace BeastBoards
                 BestTime = bestTime,
                 LevelNumber = levelNumber,
                 Category = category,
-                FriendIds = BeastBoardsMod.Steam.Users.Where(x => !x.IsPlayer).Select(x => x.Id).ToList()
+                FriendIds = Core.Steam.Users.Where(x => !x.IsPlayer).Select(x => x.Id).ToList()
             };
 
             var req = new HttpRequestMessage()
@@ -77,17 +66,14 @@ namespace BeastBoards
                 }
             };
 
-
             var result = _httpClient.SendAsync(req).GetAwaiter().GetResult();
-
 
             if (result.IsSuccessStatusCode)
             {
-                var content = result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                    var content = result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                    var items = JsonConvert.DeserializeObject<AddLeaderboardTimingResponse>(content);
 
-                var items = JsonConvert.DeserializeObject<AddLeaderboardTimingResponse>(content);
-
-                return items.Items.ToList();
+                    return items.Items;
             }
 
             return [];

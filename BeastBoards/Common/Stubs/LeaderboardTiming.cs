@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BeastBoards.Stubs
+﻿namespace BeastBoards.Common.Stubs
 {
     public class LeaderboardTiming
     {
@@ -14,8 +10,7 @@ namespace BeastBoards.Stubs
 
         public SteamUserStub GetSteamUser()
         {
-            return BeastBoardsMod.Steam.Users.FirstOrDefault(x => x.Id == SteamId);
+            return Core.Steam.Users.FirstOrDefault(x => x.Id == SteamId);
         }
-
     }
 }

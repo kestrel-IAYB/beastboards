@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TMPro;
-using Unity.XR.CoreUtils;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BeastBoards
+namespace BeastBoards.Common
 {
     public static class Error
     {
@@ -29,8 +25,8 @@ namespace BeastBoards
             GameObject asset = localAssetBundle.LoadAsset<GameObject>("BeastBoardsMessageCanvas");
             ErrorMessage = GameObject.Instantiate(asset);
 
-            var text = ErrorMessage.GetNamedChild("Panel").GetNamedChild("Message");
-            var button = ErrorMessage.GetNamedChild("Panel").GetNamedChild("Button");
+            var text = ErrorMessage.transform.Find("Panel/Message");
+            var button = ErrorMessage.transform.Find("Panel/Button");
 
             text.GetComponent<TextMeshProUGUI>().text = message;
 

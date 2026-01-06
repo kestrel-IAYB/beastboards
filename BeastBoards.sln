@@ -9,18 +9,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeastBoards.Api", ".\BeastB
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Api_Release|Any CPU = Api_Release|Any CPU
+		Mod_MelonLoader|Any CPU = Mod_MelonLoader|Any CPU
+		Api_Debug|Any CPU = Api_Debug|Any CPU
+		Mod_BepInEx|Any CPU = Mod_BepInEx|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{428F7093-FE37-41C6-93BB-F520594B50AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{428F7093-FE37-41C6-93BB-F520594B50AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{428F7093-FE37-41C6-93BB-F520594B50AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{428F7093-FE37-41C6-93BB-F520594B50AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Api_Release|Any CPU.ActiveCfg = Api_Release|Any CPU
+		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Api_Release|Any CPU.Build.0 = Api_Release|Any CPU
+		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Api_Debug|Any CPU.ActiveCfg = Api_Debug|Any CPU
+		{B96D2DD2-2C47-412D-BE0A-6D7D8C8C3F88}.Api_Debug|Any CPU.Build.0 = Api_Debug|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Mod_BepInEx|Any CPU.ActiveCfg = Mod_BepInEx|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Mod_BepInEx|Any CPU.Build.0 = Mod_BepInEx|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Mod_MelonLoader|Any CPU.ActiveCfg = Mod_MelonLoader|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Mod_MelonLoader|Any CPU.Build.0 = Mod_MelonLoader|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Api_Debug|Any CPU.ActiveCfg = Mod_BepInEx|Any CPU
+		{428F7093-FE37-41C6-93BB-F520594B50AA}.Api_Release|Any CPU.ActiveCfg = Mod_BepInEx|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

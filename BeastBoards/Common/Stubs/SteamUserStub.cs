@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace BeastBoards.Stubs
+namespace BeastBoards.Common.Stubs
 {
     public class SteamUserStub
     {

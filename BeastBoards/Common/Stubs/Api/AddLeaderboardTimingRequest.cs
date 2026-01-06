@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BeastBoards.Stubs.Api
+﻿namespace BeastBoards.Common.Stubs.Api
 {
     public class AddLeaderboardTimingRequest
     {
@@ -12,3 +8,4 @@ namespace BeastBoards.Stubs.Api
         public float BestTime { get; set; }
     }
 }
+
